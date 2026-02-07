@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+
+proxies:
+  - name: "MyVless-Reality"
+    type: vless
+    server: 216.167.25.71
+    port: 443
+    uuid: 6a61ad8f-85ab-4fec-8eab-bddd304376f7
+    tls: true
+    servername: www.microsoft.com
+    fingerprint: chrome
+    reality-opts:
+      public-key: G6i1pkZyqln_27ezmM-uXZQT6Kp2DGiiTHB_OIslsjM
+
+proxy-groups:
+  - name: 🚀 手动选择
+    type: select
+    proxies:
+      - MyVless-Reality
+      - DIRECT
+
+rules:
+  - MATCH,🚀 手动选择
