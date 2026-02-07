@@ -24,6 +24,7 @@ proxies:
     client-fingerprint: chrome
     reality-opts:
       public-key: G6i1pkZyqln_27ezmM-uXZQT6Kp2DGiiTHB_OIslsjM
+      short-id: a1b2
 
 proxy-groups:
   - name: 🚀 手动选择
